@@ -1,2 +1,2 @@
 # danger-typetalk
-Post a notification to Typetalk in a Dangerfile.
+Danger plugin to send notification to Typetalk. 
