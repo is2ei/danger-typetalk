@@ -56,7 +56,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bundler (~> 2.0)
   danger
   danger-typetalk!
   rack-test
