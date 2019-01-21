@@ -10,7 +10,7 @@ jobs:
       - checkout
       - run: gem install bundler
       - restore_cache:
-        key: gem-cache-{{ .Branch }}-{{ checksum "Gemfile" }}
+          key: gem-cache-{{ .Branch }}-{{ checksum "Gemfile" }}
       - run: bundle install --path vendor/bundle
       - save_cache:
         key: gem-cache-{{ .Branch }}-{{ checksum "Gemfile" }}
