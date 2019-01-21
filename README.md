@@ -1,10 +1,10 @@
 danger-typetalk
 ===
 
-[![Build Status](https://travis-ci.org/is2ei/danger-typetalk.svg?branch=master)][travis]
+[![CircleCI](https://circleci.com/gh/is2ei/danger-typetalk.svg?style=svg)][circleci]
 [![Gem Version](https://img.shields.io/gem/v/danger-typetalk.svg)][rubygems]
 
-[travis]: https://travis-ci.org/is2ei/danger-typetalk
+[circleci]: https://circleci.com/gh/is2ei/danger-typetalk
 [rubygems]: https://rubygems.org/gems/danger-typetalk
 
 Danger plugin to send notification to Typetalk. 

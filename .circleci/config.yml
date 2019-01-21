@@ -1,0 +1,19 @@
+version: 2
+  jobs:
+    build:
+      working_directory: ~/danger
+      docker:
+        - image: ruby:2.5
+          environment:
+          - RACK_ENV=test
+      steps:
+        - checkout
+        - run: gem install bundler
+        - restore_cache:
+          key: gem-cache-{{ .Branch }}-{{ checksum "Gemfile" }}
+        - run: bundle install --path vendor/bundle
+        - save_cache:
+          key: gem-cache-{{ .Branch }}-{{ checksum "Gemfile" }}
+          paths:
+            - vendor/bundle
+        - run: bundle exec danger
