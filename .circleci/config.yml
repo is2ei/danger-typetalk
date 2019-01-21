@@ -13,7 +13,7 @@ jobs:
           key: gem-cache-{{ .Branch }}-{{ checksum "Gemfile" }}
       - run: bundle install --path vendor/bundle
       - save_cache:
-        key: gem-cache-{{ .Branch }}-{{ checksum "Gemfile" }}
-        paths:
-          - vendor/bundle
+          key: gem-cache-{{ .Branch }}-{{ checksum "Gemfile" }}
+          paths:
+            - vendor/bundle
       - run: bundle exec danger
